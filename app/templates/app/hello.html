@@ -1,0 +1,17 @@
+{% comment %} {% if is_authenticated %}
+  <h1>Hello {{ name }}</h1>
+{% else %}
+  <h1>Get out</h1>
+{% endif %} {% endcomment %}
+
+{% comment %} <h3>{{ others.0 }}</h3> {% endcomment %}
+<h1>Job Title</h1>
+<ul>
+  {% for job in job_title %}
+    <li>{{ job }}</li>
+  {% endfor %}
+</ul>
+
+{% comment %} <h1>Filters</h1>
+{{ job_title|length }}
+{{job_title|length_is:"3"}} {% endcomment %}
